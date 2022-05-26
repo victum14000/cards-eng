@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+	<form>
+		<div class="add">
+			<input placeholder="слово" name="word" list="words">
+				<datalist id="words">
+							<option>работа</option>
+							<option>дом</option>
+							<option>учеба</option>
+					</datalist>
+			<input placeholder="перевод" name="translation" list="translations">
+				<datalist id="translations">
+							<option>work</option>
+							<option>house</option>
+							<option>study</option>
+				</datalist>
+			<input placeholder="цвет" name="color" list="colors">
+				<datalist id="colors">
+							<option>lightblue</option>
+							<option>lightyellow</option>
+							<option>lightgreen</option>
+				</datalist>
+			<button class="button">Добавить</button>
+		</div>
+		<div class="find">
+			<input id="find" placeholder="найти" name="find">
+		</div>
+	</form>
+	<div id="cards"></div>
+	<script src="script/main.js"></script>
+</body>
+</html>

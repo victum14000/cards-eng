@@ -1,0 +1,98 @@
+
+$light-font-color: #FFFFFF
+$dark-font-color: #000000
+$button-color: #F39C12
+$form-color: #EBEBEB
+
+*
+	margin: 0
+	padding: 0
+
+@mixin mix-button($bg-color: $button-color, $color: $light-font-color)
+	background-color: $bg-color
+	color: $color
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 200px
+	height: 50px
+	border-radius: 25px
+	border: none
+	cursor: pointer
+
+
+form 
+	height: 120px
+	display: flex
+	justify-content: space-around
+	align-items: center
+	width: 100%
+	padding: 20px
+	box-sizing: border-box
+	.add
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 843px
+		box-sizing: border-box
+		border: 2px solid $dark-font-color
+		border-radius: 15px
+		padding: 25px
+		input
+			box-sizing: border-box
+			width: 150px
+			height: 50px
+			padding-left: 20px
+			border-radius: 25px
+			border: none
+			background-color: $form-color
+	.find
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 500px
+		box-sizing: border-box
+		border: 2px solid gray
+		border-radius: 15px
+		padding: 25px
+		input
+			box-sizing: border-box
+			width: 400px
+			height: 50px
+			border-radius: 25px
+			border: none
+			background-color: $form-color
+			padding-left: 25px
+
+.button
+	@include mix-button
+
+
+#cards
+	display: grid
+	grid-template-columns: repeat(3, 300px)
+	grid-auto-rows: 200px
+	justify-content: space-between
+	grid-column-gap: 30px
+	grid-row-gap: 30px
+	margin: 90px 60px
+.card
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	border-radius: 35px
+	cursor: pointer
+	p
+		font-size: 30px
+.close
+	position: absolute
+	width:  40px
+	height:  40px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 30px
+	top: -13px
+	right: -13px
+	cursor: pointer
